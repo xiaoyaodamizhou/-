@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css</title>
+    <style></style>
+</head>
+<body>
+css简文
+长度{
+默认: 1em = 16px
+若设置font-size=(1/16*10)%; 则1em=10px;
+}
+
+元素样式{
+inline:只有content尺寸，想height,width,border都没有
+block:盒模型
+inline-block：是Inline布局，block模式。有height,width,border
+}
+
+背景图片{
+background-attachment 背景图像是否固定或者随着页面的其余部分滚动
+background-color 设置元素的背景颜色
+background-image 把图片设置为背景
+background-position 设置背景图片的起始位置
+background-repeat 设置背景图片是否及如何重复
+background-size 规定背景图片的尺寸
+background-origin 规定背景图片的定位区域
+background-clip 规定背景的绘制区域
+
+}
+
+文本{
+color 文本颜色
+direction 文本方向
+line-height 行高
+letter-spacing 字符间距
+text-align 对齐元素中的文本
+text-decoration 向文本添加修饰
+text-indent 缩进元素中文本的首行
+text-transform 元素中的字母
+unicode-bidi 设置文本方向
+white-space 元素中空白的处理方式
+word-spacing 字间距
+}
+
+css链接{
+a:link --普通的、未被访问的链接
+a:visited --用户已访问的链接
+a:hover --鼠标指针位于链接的上方
+a:active --链接被点击的时刻
+}
+
+css列表(ul>li, ol>li){
+list-style-type 这个属性我们就可以用来控制标记类型:(circle, square,
+    upper-roman, lower-alpha)
+list-style-image 列表项图片
+list-style
+}
+
+css表格{
+border-collapse ---设置是否把表格边框合并为单一的边框。
+border-spacing ---设置分隔单元格边框的距离。
+caption-side --- 设置表格标题的位置。
+empty-cells ---设置是否显示表格中的空单元格。
+table-layout ---设置显示单元、行和列的算法。
+}
+
+css轮廓{
+outline-color   设置轮廓的颜色。
+outline-style   设置轮廓的样式。
+outline-width   设置轮廓的宽度。
+}
+
+css内边距{
+上，右， 下， 左
+}
+
+css定位{
+普通流:
+元素按照其在 HTML 中的位置顺序决定排布的过程
+
+浮动:
+浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。
+float:left, right
+必须浮动
+clear:both
+
+绝对定位:
+绝对定位使元素的位置与文档流无关，因此不占据空间。
+这一点与相对定位不同，相对定位实际上被看作普通流定位模型的一部分，
+因为元素的位置相对于它在普通流中的位置。
+
+定位属性:{
+position,将元素放在一个静态的,相对的,绝对的,或固定的位置
+(absolute, relative, static, fixed)
+通过对 top,left,right,bottom 这四个属性的赋值让元素向对应的方向偏移
+overflow 设置元素溢出其区域发生的事情
+clip 设置元素的显示形状,多用于图片
+vertical-align 设置元素的垂直方式
+z-index 设置元素的堆叠顺序
+}
+
+元素选择器:{
+后代选择器 p strong
+子元素选择器 p > strong
+与后代选择器相比,子元素选择器只能选择作为某子元素的元素
+相邻兄弟选择器 P + P
+}
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js" type="javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnGetFile").click(function (e) {
+                var fileList = document.getSelection("#fileDemo").files
+                for(var i=0; i<fileList.length; i++){
+                    if(!(/image\/\w+/.test(fileList[i].type))){
+                        $("#result").append("<span>type:"+
+                            fileList[i].type+"非图片类型name:"+
+                        fileList[i].name+"size:"+fileList[i].size+"</span><br>")
+                    }else{
+                        $("#result").append("<span>type:"+
+                            fileList[i].type + "-name:" + fileList[i].name
+                            + "-size:"+ fileList[i].size +"</span>")
+                    }
+                }
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        var canvas = document.getSelection("#demoCanvas")
+        var context = canvas.getContext('2d')
+        context.strokeStyle = 'red'
+        context.strokeRect(10, 10, 190, 100)
+        context.fillStyle = 'blue'
+        context.fillRect(110, 100, 100, 100)
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>html5的js</legend>
+        <!--novalidate提交表单不进行验证-->
+        <form action="#" method="post" novalidate="true">
+            <input type="file" multiple="multiple" name="fileDemo" id="
+fileDemo">
+            <input type="button" value="name" id="btnGetFile">
+            <div id="result"></div>
+        </form>
+        <hr>
+        <canvas id="demoCanvas" width="500" height="500">
+            <p></p>
+        </canvas>
+    </fieldset>
+</body>
+</html>

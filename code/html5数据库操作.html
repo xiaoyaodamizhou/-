@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function initDataBase() {
+            var db = getCurrentDb();
+            if (!db) {
+                alert("not support db ")
+                return
+            }
+            db.transaction(function (trans) {
+                trans.executeSql("create table if not exists " +
+                    "Demo(name text null, title text null, words text null)", [],
+                    function (trans, result) {
+                        console.log("create result:" + result)
+                    },
+                    function (trans, message) {
+                        console.log("create message" + message)
+                    })
+            })
+        }
+
+        $(function () {
+            initDataBase()
+            $("#btnSave").click(function () {
+                var txtName = $('#txtName').val()
+                var txtTitle = $('#txtTitle').val()
+                var txtWords = $('#txtWords').val()
+                var db = getCurrentDb()
+                db.transaction(function (trans) {
+                    trans.executeSql("insert into Demo(name, title, words) values (?, ?, ?)",
+                        [txtName, txtTitle, txtWords],
+                        function (ts, data) {
+                            console.log("insert data" + data)
+                        },
+                        function (ts, message) {
+                            console.log("insert message" + message)
+                        })
+                })
+                showAllTheData()
+            })
+        })
+
+        function getCurrentDb() {
+            var db = openDatabase('myDb', '1.0', "save demo data", 1024 * 1024)
+            return db
+        }
+
+        function showAllTheData() {
+            $('#tblData').empty()
+            var db = getCurrentDb()
+            db.transaction(function (trans) {
+                trans.executeSql("select * from Demo", [],
+                    function (ts, data) {
+                        if (data) {
+                            for (var i = 0; i < data.rows.length; i++) {
+                                appendDataToTable(data.rows.item(i))
+                            }
+                        }
+                    },
+                    function (ts, message) {
+                        console.log("inquery message" + message)
+                        var tst = message
+                    })
+            })
+        }
+
+        function appendDataToTable(data) {
+            var txtName = data.name
+            var txtTitle = data.title
+            var txtWords = data.words
+            var strHtml = ""
+            strHtml += '<tr>'
+            strHtml += "<td>" + txtName + "</td>"
+            strHtml += "<td>" + txtTitle + "</td>"
+            strHtml += "<td>" + txtWords + "</td>"
+            strHtml += "</tr>"
+            $('#tblData').append(strHtml)
+        }
+
+        function delTable() {
+            var db = getCurrentDb()
+            db.transaction(function (trans) {
+                trans.executeSql('drop table Demo', [],
+                    function (trans, result) {},
+                    function (trans, message) {
+
+                    })
+            })
+        }
+    </script>
+    <style>
+        #sTable{
+            border-color: darkslategray;
+            border-collapse: collapse;
+            border-spacing: 2px;
+            empty-cells: show;
+        }
+        #tblData{
+            /*border-collapse: collapse;*/
+            border: 2px solid black;
+        }
+        #tblData tr:nth-child(even){
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+<!--localstorage, sessionstorage-->
+<!--openDatabse 数据库名称， 版本号，描述，大小， 回调函数-->
+<!--transaction -->
+<!--executeSql sql语句， 值， 成功处理函数， 失败回调函数-->
+<fieldset>
+    <legend>
+        <label for="sTable">short table</label>
+    </legend>
+    <table id="sTable">
+        <tr>
+            <td>name:</td>
+            <td>
+                <input type="text" name="txtName" id="txtName" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>title:</td>
+            <td>
+                <input type="text" name="txtTitle" id="txtTitle" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Words:</td>
+            <td>
+                <input type="text" name="txtWords" id="txtWords" required>
+            </td>
+        </tr>
+    </table>
+    <input type="button" value="save" id="btnSave">
+    <hr>
+    <input type="button " value="show data" onclick="showAllTheData();">
+    <table id="tblData"></table>
+
+</fieldset>
+</body>
+
+</html>
