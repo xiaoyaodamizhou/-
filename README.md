@@ -51,7 +51,7 @@ __前端学习总结__
 
 
 ### 爬虫
-![爬虫](./images/时光网爬虫.png)
+![爬虫](./images/豆瓣爬虫.png)
 ![爬虫](./images/数据可视化.gif)
 <pre>
 	一个是利用python的extree解析页面，requests获取页面
