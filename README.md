@@ -2,7 +2,7 @@
 
 __前端学习总结__
 ### 编译器编写效果图
-![编译器](./images/interpreter.png)
+![编译器](./images/interpreter.gif)
 <pre>
 	原理：
 	前端：（词法，语法分析） =》 ast抽象语法树
