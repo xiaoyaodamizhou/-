@@ -32,7 +32,7 @@ __前端学习总结__
 
 
 ### 图形编程
-![GUI](./images/gui.gif)
+![GUI](./images/GUI.gif)
 <pre>
 	利用了画布的getimagedata对像素处理
 	构造了从点到线到面的实现。
