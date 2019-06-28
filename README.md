@@ -2,7 +2,7 @@
 
 __前端学习总结__
 ### 编译器编写效果图
-![编译器](./images/interpreter.png)
+![编译器](./images/interpreter.gif)
 <pre>
 	原理：
 	前端：（词法，语法分析） =》 ast抽象语法树
@@ -32,7 +32,7 @@ __前端学习总结__
 
 
 ### 图形编程
-![GUI](./images/gui.gif)
+![GUI](./images/GUI.gif)
 <pre>
 	利用了画布的getimagedata对像素处理
 	构造了从点到线到面的实现。
@@ -50,14 +50,26 @@ __前端学习总结__
 </pre>
 
 
-### 爬虫
-![爬虫](./images/时光网爬虫.png)
+### 可视化爬虫
+![爬虫](./images/豆瓣爬虫.png)
 ![爬虫](./images/数据可视化.gif)
 <pre>
 	一个是利用python的extree解析页面，requests获取页面
 	（该爬虫能够伪造成浏览器，更为强大的爬虫）
 	另一个是利用node.js的cheerio解析页面，requestsync获取页面 
+	将获取的数据，使用lodash结合echarts进行处理后，渲染到页面。
 </pre>
+
+### 音乐播放器
+![播放器](./images/player.gif)
+<pre>
+	原生js实现了带有音量调节，进度条，随机播放，收藏功能的播放器
+</pre>
+
+### react实现TODO
+![react todo](./images/todo.gif)
+express框架搭建服务器，node.js对数据进行处理
+然后前端用react写的TODO，实现了todo计数组件，TODO状态组件。
 
 ### 轮播图
 ![轮播图](./images/轮播图.gif)
