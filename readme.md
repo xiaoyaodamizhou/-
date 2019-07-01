@@ -1,12 +1,14 @@
 # -我的前端学习作品
 
-__前端学习总结__
-### 编译器编写效果图
-![编译器](./images/interpreter.gif)
+# __前端学习总结__
+
+### 商城
+![sell](./images/sell.gif)
 <pre>
-	原理：
-	前端：（词法，语法分析） =》 ast抽象语法树
-	后端： (中间代码，优化，汇编，目标代码)
+	vuecli搭建页面，vue构建header,seller,
+	shopcart,ratings组件，vueResourece,vueRouter的使用
+	webpack配置，es6代码风格编写，css stylus的使用
+	特色：实现了点击购物图标时，物品从当前位置移动到购物车动画
 </pre>
 
 ### 博客
@@ -22,15 +24,6 @@ __前端学习总结__
 利用了Blueprint对路由函数进行包装	
 </pre>
 
-### 游戏flappy_bird
-![flappy_bird](./images/flappyBird.gif)
-<pre>
-	利用原生js，结合html5的画布编写的flappy_bird游戏
-	一个游戏，游戏中解决了小鸟的重力下头部会朝下，游戏如何实时更新。
-	比如调节下面的金手指，改变小鸟，管道的速录宽度，而游戏中自动跟新数值
-</pre>
-
-
 ### 图形编程
 ![GUI](./images/GUI.gif)
 <pre>
@@ -39,16 +32,13 @@ __前端学习总结__
 	实现了画图，油漆桶，橡皮擦，清空，撤回，按钮功能
 </pre>
 
-
-### 商城
-![sell](./images/sell.gif)
+### 游戏flappy_bird
+![flappy_bird](./images/flappyBird.gif)
 <pre>
-	vuecli搭建页面，vue构建header,seller,
-	shopcart,ratings组件，vueResourece,vueRouter的使用
-	webpack配置，es6代码风格编写，css stylus的使用
-	特色：实现了点击购物图标时，物品从当前位置移动到购物车动画
+	利用原生js，结合html5的画布编写的flappy_bird游戏
+	一个游戏，游戏中解决了小鸟的重力下头部会朝下，游戏如何实时更新。
+	比如调节下面的金手指，改变小鸟，管道的速录宽度，而游戏中自动跟新数值
 </pre>
-
 
 ### 可视化爬虫
 ![爬虫](./images/豆瓣爬虫.png)
@@ -58,6 +48,15 @@ __前端学习总结__
 	（该爬虫能够伪造成浏览器，更为强大的爬虫）
 	另一个是利用node.js的cheerio解析页面，requestsync获取页面 
 	将获取的数据，使用lodash结合echarts进行处理后，渲染到页面。
+</pre>
+
+### 编译器编写效果图
+![编译器](./images/编译原理(1).png)
+![编译器](./images/编译原理(2).png)
+<pre>
+	原理：
+	前端：（词法，语法分析） =》 ast抽象语法树
+	后端： (中间代码，优化，汇编，目标代码)
 </pre>
 
 ### 音乐播放器
