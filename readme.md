@@ -21,7 +21,7 @@
 对用户注册，密码重置利用了flask_mail的邮箱确认
 页面的布局利用了bootstrap
 模板使用了jinjia对html编写
-利用了Blueprint对路由函数进行包装	
+利用了Blueprint对路由函数进行包装
 </pre>
 
 ### 图形编程
@@ -46,7 +46,7 @@
 <pre>
 	一个是利用python的extree解析页面，requests获取页面
 	（该爬虫能够伪造成浏览器，更为强大的爬虫）
-	另一个是利用node.js的cheerio解析页面，requestsync获取页面 
+	另一个是利用node.js的cheerio解析页面，requestsync获取页面
 	将获取的数据，使用lodash结合echarts进行处理后，渲染到页面。
 </pre>
 
@@ -69,4 +69,3 @@
 ![react todo](./images/todo.gif)
 express框架搭建服务器，node.js对数据进行处理
 然后前端用react写的TODO，实现了todo计数组件，TODO状态组件。
-
