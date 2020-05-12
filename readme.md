@@ -2,7 +2,7 @@
 
 # __学习总结__
 ### 个人网站
-![个人网站](http://49.234.21.254:9000/)<br>
+[个人网站](http://49.234.21.254:9000/)<br>
 <pre>
 	docker的代码托管，持续集成和部署.vue,vue-router,vuex,elementUi进行前端的搭建.通过python爬虫mock数据. python flask, mysql编写后端接口.
 </pre>
